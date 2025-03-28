@@ -25,8 +25,12 @@ function readKeys (e) {
             keyAction === 'divide'
     ){
         // console.log(keyAction);
+        const lastInput = keyInputs[keyInputs.length - 1];
+        const isLastOperator = ['+', '-', '*', '/'].includes(lastInput);
+        if(isLastOperator) keyInputs[keyInputs.length - 1] = keyValue;
+        else keyInputs.push(keyValue);
         displayScreen.textContent = keyValue;
-        keyInputs.push(keyValue);
+        // keyInputs.push(keyValue);
     }
     else if(keyValue === '='){
         displayScreen.textContent =  calculate(result);
