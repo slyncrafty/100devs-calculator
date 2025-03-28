@@ -14,7 +14,8 @@
     display: block;
     margin: 0 auto;
   }
-  
+
+
   body {
     background-color: aliceblue;
     display: flex;
@@ -39,9 +40,13 @@
     justify-content: end;
     background-color: aliceblue;
     font-size: 20px;
-    padding: 20px;
+    height: 60px;
     margin: 20px 5px;
     border-radius: 3px;
+  }
+
+  #input {
+    overflow: hidden;
   }
 
   .keys {
